@@ -31,7 +31,6 @@ func main() {
 		fmt.Println("default case")
 	}
 
-	fmt.Println("\n")
 
 	var age int
 	fmt.Println("Enter Age: ")
