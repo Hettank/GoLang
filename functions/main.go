@@ -17,9 +17,24 @@ func addition(a , b int) (result int) {
 	return
 }
 
+func swap(x, y string) (string, string) {
+	return y, x // function can return multiple values
+}
+
 func main() {
 	simpleFunction()
 	additionVal := addition(5, 6)
 
 	fmt.Println(additionVal)
+
+	a, b := swap("hello", "world")
+	fmt.Println(a, b)
+
+	// v1 is of type int64 and v2 is of type int32, even though they have the same value and same type int, but still you cannot assign v1 to v2 directly because the internal data types are different.
+	// var v1 int64
+	// var v2 int32
+	// v1 = 32
+	// v2 = 32
+
+	// v2 = v1
 }
