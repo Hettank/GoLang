@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+
+
 func simpleFunction() {
 	fmt.Println("this is simple function")
 }
@@ -12,6 +14,10 @@ func simpleFunction() {
 // 	return a - b
 // }
 
+func compute(fn func(int, int) int) int {
+	return fn(10, 6)
+}
+
 func addition(a , b int) (result int) {
 	result = a + b
 	return
@@ -21,7 +27,15 @@ func swap(x, y string) (string, string) {
 	return y, x // function can return multiple values
 }
 
+
+
 func main() {
+	assigned := func() string {
+		return "this is the function assigned to a variable"
+	}
+
+	fmt.Println("from compute: ", compute(addition))
+
 	simpleFunction()
 	additionVal := addition(5, 6)
 
@@ -37,4 +51,8 @@ func main() {
 	// v2 = 32
 
 	// v2 = v1
+
+
+
+	fmt.Println(assigned())
 }
